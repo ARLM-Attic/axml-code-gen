@@ -1,0 +1,8 @@
+C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK15853\trunk\AXMLCodeGenerator\AXMLCodeGenerator\bin\Debug\AXMLCodeGenerator.dll
+C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK15853\trunk\AXMLCodeGenerator\AXMLCodeGenerator\bin\Debug\AXMLCodeGenerator.pdb
+C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK15853\trunk\AXMLCodeGenerator\AXMLCodeGenerator\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK15853\trunk\AXMLCodeGenerator\AXMLCodeGenerator\obj\Debug\AXMLCodeGenerator.Properties.Resources.resources
+C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK15853\trunk\AXMLCodeGenerator\AXMLCodeGenerator\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK15853\trunk\AXMLCodeGenerator\AXMLCodeGenerator\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK15853\trunk\AXMLCodeGenerator\AXMLCodeGenerator\obj\Debug\AXMLCodeGenerator.dll
+C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK15853\trunk\AXMLCodeGenerator\AXMLCodeGenerator\obj\Debug\AXMLCodeGenerator.pdb
