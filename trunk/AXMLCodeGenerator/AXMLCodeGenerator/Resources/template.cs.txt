@@ -9,6 +9,7 @@ namespace %NameSpace%
 
         private void Initialize()
         {
+			SetContentView(Resource.Layout.%ViewName%);
             %VarsInitial%
         }
     }

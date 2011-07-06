@@ -24,7 +24,7 @@ namespace AXMLCodeGenerator
             StringBuilder designerClass = new StringBuilder(Resources.template_cs);
 
             //Generate Keys and Values
-            Dictionary<string, string> varList = CreateControlList(aXMLContent);
+            List<AndroidControl> varList = CreateControlList(aXMLContent);
 
             //Replacement
             designerClass.Replace("%NameSpace%", NameSpace);
@@ -41,43 +41,59 @@ namespace AXMLCodeGenerator
         /// </summary>
         /// <param name="axml">Content of the axml File</param>
         /// <returns>Dictionary with controls and types</returns>
-        private Dictionary<string, string> CreateControlList(string axml)
+        private List<AndroidControl> CreateControlList(string axml)
         {
-            Dictionary<string, string> controlList = new Dictionary<string, string>();
+            List<AndroidControl> controlList = new List<AndroidControl>();
             XmlDocument xdoc = new XmlDocument();
 
             xdoc.LoadXml(axml);
 
+            //Iterate over every Control in the First View -> Make fully rekursiv!
             foreach (XmlElement xE in xdoc.ChildNodes[1].ChildNodes)
             {
-                if (xE.HasAttribute("android:id"))
+                AndroidControl andContr = new AndroidControl();
+                andContr.Type = xE.Name;
+
+                foreach (XmlAttribute xA in xE.Attributes)
                 {
-                    controlList.Add(xE.Attributes["android:id"].Value.Replace("@+id/", ""), xE.Name);
+                    andContr.Attributes.Add(xA.Name, xA.Value);
                 }
+
+                controlList.Add(andContr);
             }
 
             return controlList;
         }
 
-        private string CreateVariableDefinitionList(Dictionary<string, string> controlDir)
+        /// <summary>
+        /// Creates a definition list of all controls (with an ID)
+        /// </summary>
+        /// <param name="controlDir">List of controls</param>
+        /// <returns>C# List of Controls</returns>
+        private string CreateVariableDefinitionList(List<AndroidControl> controlDir)
         {
             StringBuilder defList = new StringBuilder();
 
-            foreach (KeyValuePair<string, string> varDef in controlDir)
+            foreach (AndroidControl aCont in controlDir)
             {
-                defList.AppendLine("private " + varDef.Value + " " + varDef.Key + ";");
+                defList.AppendLine("private " + aCont.Type + " " + aCont.Attributes["android:id"].Replace("@+id/", "") + ";");
             }
 
             return defList.ToString();
         }
 
-        private string CreateVariableInitList(Dictionary<string, string> controlDir)
+        /// <summary>
+        /// Creates a list of intiialised vars
+        /// </summary>
+        /// <param name="controlDir">List of controls</param>
+        /// <returns>C# initialisation list</returns>
+        private string CreateVariableInitList(List<AndroidControl> controlDir)
         {
             StringBuilder initList = new StringBuilder();
 
-            foreach (KeyValuePair<string, string> varDef in controlDir)
+            foreach (AndroidControl aCont in controlDir)
             {
-                initList.AppendLine(varDef.Key + " = FindViewById<" + varDef.Value + ">(Resource.Id." + varDef.Key + ");");
+                initList.AppendLine(aCont.Attributes["android:id"].Replace("@+id/", "") + " = FindViewById<" + aCont.Type + ">(Resource.Id." + aCont.Attributes["android:id"].Replace("@+id/", "") + ");");
             }
 
             return initList.ToString();
