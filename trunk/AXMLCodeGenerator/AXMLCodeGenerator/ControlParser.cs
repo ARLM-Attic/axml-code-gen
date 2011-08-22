@@ -9,6 +9,8 @@ namespace AXMLCodeGenerator
 {
     public class ControlParser
     {
+        List<AndroidControl> controlList;
+
         /// <summary>
         /// Generates a new partial C# class. Every control from the axml
         /// will be accessable over this class.
@@ -43,13 +45,36 @@ namespace AXMLCodeGenerator
         /// <returns>Dictionary with controls and types</returns>
         private List<AndroidControl> CreateControlList(string axml)
         {
-            List<AndroidControl> controlList = new List<AndroidControl>();
+            controlList = new List<AndroidControl>();
             XmlDocument xdoc = new XmlDocument();
 
             xdoc.LoadXml(axml);
 
             //Iterate over every Control in the First View -> Make fully rekursiv!
-            foreach (XmlElement xE in xdoc.ChildNodes[1].ChildNodes)
+            FindElements(xdoc.ChildNodes[1].ChildNodes);
+            //foreach (XmlElement xE in xdoc.ChildNodes[1].ChildNodes)
+            //{
+            //    AndroidControl andContr = new AndroidControl();
+            //    andContr.Type = xE.Name;
+
+            //    foreach (XmlAttribute xA in xE.Attributes)
+            //    {
+            //        andContr.Attributes.Add(xA.Name, xA.Value);
+            //    }
+
+            //    controlList.Add(andContr);
+            //}
+
+            return controlList;
+        }
+
+        /// <summary>
+        /// Search recursivly all Elements in a list
+        /// </summary>
+        /// <param name="nList">Element List</param>
+        private void FindElements(XmlNodeList nList)
+        {
+            foreach (XmlElement xE in nList)
             {
                 AndroidControl andContr = new AndroidControl();
                 andContr.Type = xE.Name;
@@ -59,10 +84,10 @@ namespace AXMLCodeGenerator
                     andContr.Attributes.Add(xA.Name, xA.Value);
                 }
 
+                FindElements(xE.ChildNodes);
+
                 controlList.Add(andContr);
             }
-
-            return controlList;
         }
 
         /// <summary>

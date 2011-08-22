@@ -27,3 +27,13 @@ C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK28369\trunk\AXMLCodeGenerator\AXMLC
 C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK28369\trunk\AXMLCodeGenerator\AXMLCodeGenerator_Test\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK20525\trunk\AXMLCodeGenerator\AXMLCodeGenerator_Test\obj\x86\Debug\AXMLCodeGenerator_Test.exe
 C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK20525\trunk\AXMLCodeGenerator\AXMLCodeGenerator_Test\obj\x86\Debug\AXMLCodeGenerator_Test.pdb
+C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK04520\trunk\AXMLCodeGenerator\AXMLCodeGenerator_Test\obj\x86\Debug\AXMLCodeGenerator_Test.exe
+C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK04520\trunk\AXMLCodeGenerator\AXMLCodeGenerator_Test\obj\x86\Debug\AXMLCodeGenerator_Test.pdb
+C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK04520\trunk\AXMLCodeGenerator\AXMLCodeGenerator_Test\bin\Debug\AXMLCodeGenerator_Test.exe
+C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK04520\trunk\AXMLCodeGenerator\AXMLCodeGenerator_Test\bin\Debug\AXMLCodeGenerator_Test.pdb
+C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK04520\trunk\AXMLCodeGenerator\AXMLCodeGenerator_Test\bin\Debug\AXMLCodeGenerator.dll
+C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK04520\trunk\AXMLCodeGenerator\AXMLCodeGenerator_Test\bin\Debug\AXMLCodeGenerator.pdb
+C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK04520\trunk\AXMLCodeGenerator\AXMLCodeGenerator_Test\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK04520\trunk\AXMLCodeGenerator\AXMLCodeGenerator_Test\obj\x86\Debug\AXMLCodeGenerator_Test.TestForm.resources
+C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK04520\trunk\AXMLCodeGenerator\AXMLCodeGenerator_Test\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\inffbr.HEALTH\AppData\Local\Temp\WRK04520\trunk\AXMLCodeGenerator\AXMLCodeGenerator_Test\obj\x86\Debug\GenerateResource.write.1.tlog
